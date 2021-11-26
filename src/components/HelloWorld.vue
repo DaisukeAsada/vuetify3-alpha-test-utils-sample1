@@ -23,6 +23,7 @@
             target="_blank"
           >Discord Community</a>
         </p>
+        <p>{{ msg }}</p>
       </v-col>
 
       <v-col
@@ -96,7 +97,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'HelloWorld',
-
+  props: {
+    msg: {
+      type: String
+    }
+  },
   data () {
     return {
       ecosystem: [
